@@ -34,5 +34,4 @@ jobs:
     - name: Test with pytest
       run: |
         export PYTHONPATH=src
-	pytest
-	#comment
+        pytest

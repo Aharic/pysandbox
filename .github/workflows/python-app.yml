@@ -37,15 +37,15 @@ jobs:
       run: |
         export PYTHONPATH=src
 <<<<<<< HEAD
-	pytest
+        pytest
     - name: Deploy to Heroku  
       env:
         HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
-	HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+        HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
       if: github.ref = 'refs/heads/master' && job.status == 'success'
       run: |
         git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
-	git push heroku HEAD:master -f
+        git push heroku HEAD:master -f
 =======
         pytest
 >>>>>>> cd164a99416a69e1b36b2520ffa8c7e64a4b7204
